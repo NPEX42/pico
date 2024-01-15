@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "pico.h": "c",
+        "stdbool.h": "c",
+        "stdio.h": "c",
+        "glfw3.h": "c",
+        "app.h": "c",
+        "engine.h": "c",
+        "functional": "c",
+        "common.h": "c"
+    }
+}

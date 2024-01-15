@@ -1,0 +1,5 @@
+#!/bin/bash
+./premake5 gmake2
+make clean
+make -j6 || exit 1
+./bin/Debug/Sandbox
