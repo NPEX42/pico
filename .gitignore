@@ -1,5 +1,4 @@
-
-.vscode/timeyWimey
+.vscode/**
 Makefile
 **.make
 **.d

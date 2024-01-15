@@ -1,6 +1,7 @@
 #include "pico.h"
 #include <stdio.h>
 #include <GLFW/glfw3.h>
+
 bool pico_init(void) {
     printf("Pico Engine v%d.%d\n", PICO_MAJOR, PICO_MINOR);
     return glfwInit();
