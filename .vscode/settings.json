@@ -8,6 +8,11 @@
         "engine.h": "c",
         "functional": "c",
         "common.h": "c",
-        "cglm.h": "c"
+        "cglm.h": "c",
+        "maths.h": "c",
+        "renderer.h": "c",
+        "stdlib.h": "c",
+        "stddef.h": "c",
+        "glad.h": "c"
     }
 }

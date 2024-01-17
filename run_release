@@ -1,0 +1,5 @@
+#!/bin/bash
+premake5 gmake2
+make clean config=release
+make config=release -j6
+./bin/Release/Sandbox

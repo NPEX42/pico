@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include <string.h>
+#include <stdio.h>
 
 typedef uint8_t  U8;
 typedef uint16_t U16;
@@ -16,3 +18,5 @@ typedef int64_t S64;
 
 typedef float F32;
 typedef double F64;
+
+typedef char* cstr_t;

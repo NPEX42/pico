@@ -17,12 +17,22 @@ workspace "Pico"
         links {
             "Engine",
             "glfw3",
-            "m"
+            "m",
+            "Glad"
         }
 
         libdirs {
             "vendor"
         }
+
+        filter "configurations:Release"
+            defines {"NDEBUG"}
+            optimize "On"
+
+        filter "configurations:Debug"
+            defines {"DEBUG"}
+            optimize "Off"
+            symbols "On"
 
     project "Engine"
         kind "StaticLib"
@@ -30,7 +40,9 @@ workspace "Pico"
 
         files {
             "./src/engine/engine.c",
-            "src/engine/maths.c"
+            "src/engine/maths.c",
+            "src/engine/renderer.c",
+            "src/engine/utils.c"
         }
 
         includedirs {
@@ -40,9 +52,15 @@ workspace "Pico"
 
         links {
             "glfw3",
-            "m"
+            "m",
+            "Glad"
         }
 
         libdirs {
             "vendor"
         }
+
+        filter "configurations:Debug"
+            defines {"DEBUG"}
+            optimize "Off"
+            symbols "On"
