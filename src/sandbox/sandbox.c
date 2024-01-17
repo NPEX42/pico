@@ -39,6 +39,11 @@ PicoEngine* gPico = NULL;
 
 void onCreate(PicoEngine* pico) {
     gPico = pico;
+
+    PicoImage* image = load_image("assets/textures/uv_grid1024.png");
+
+    printf("Texture Dims: %dx%d\n", image->width, image->height);
+
 }
 
 bool onUpdate() {

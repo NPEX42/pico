@@ -5,6 +5,8 @@
 #include "pico/engine.h"
 #include "pico/maths.h"
 #include "pico/renderer.h"
+#include "pico/image.h"
+
 
 #define PICO_MAJOR 0
 #define PICO_MINOR 1
