@@ -36,9 +36,28 @@ int main(void) {
 }
 
 PicoEngine* gPico = NULL;
+PicoImage* gUV = NULL;
+PicoImage* icon;
+
+PicoSprite* sprites = NULL;
 
 void onCreate(PicoEngine* pico) {
     gPico = pico;
+
+    gUV = load_image("assets/textures/uv_grid1024.png");
+    icon = load_image("assets/textures/DirIcon");
+    pico_set_icon(pico, icon);
+
+    printf("Texture Dims: %dx%d\n", gUV->width, gUV->height);
+
+    sprites = malloc(sizeof(PicoSprite) * 10);
+
+    for (int i = 0; i < 10; i++) {
+        sprites[i].img = gUV;
+        sprites[i].position = (PVec2) {(i * 1.5) / 10.0 - 0.67, 0};
+        sprites[i].size = (PVec2) {0.5, 0.5};
+        sprites[i].color = (PVec3) {1, 1, 1};
+    }
 }
 
 bool onUpdate() {
@@ -48,17 +67,11 @@ bool onUpdate() {
 
 void onRender() {
     pico_background(0.1, 0.2, 0.3);
-    pico_quad_centered(gPico->renderer,
-        -0.5, 0.5, (PVec3) {1, 0, 0}, 0.5, 0.5
-    );
+    for (int i = 0; i < 10; i++) {
+        pico_sprite(gPico->renderer, &sprites[i]);
+    }
 
-    pico_quad_centered(gPico->renderer,
-        0, 0, (PVec3) {0, 1, 0}, 0.5, 0.5
-    );
-
-    pico_quad_centered(gPico->renderer,
-        0.5, -0.5, (PVec3) {0, 0, 1}, 0.5, 0.5
-    );
+    
 
 }
 

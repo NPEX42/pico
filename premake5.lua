@@ -42,7 +42,9 @@ workspace "Pico"
             "./src/engine/engine.c",
             "src/engine/maths.c",
             "src/engine/renderer.c",
-            "src/engine/utils.c"
+            "src/engine/utils.c",
+            "src/engine/stb_image.c",
+            "src/engine/image.c"
         }
 
         includedirs {

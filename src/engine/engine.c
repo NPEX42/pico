@@ -3,6 +3,8 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#define MAX_QUADS 1024
+
 void _resizeFramebufferHandler(GLFWwindow* window, int width, int height) {
     PicoApp* app = glfwGetWindowUserPointer(window);
     glViewport(0, 0, width, height);
@@ -25,9 +27,11 @@ MessageCallback( GLenum source,
                  const GLchar* message,
                  const void* userParam )
 {
-  fprintf( stdout, "GL CALLBACK: %s type = 0x%x, severity = 0x%x, message = %s\n",
+    if (id == 0x20071) {  return; }
+
+  fprintf( stdout, "GL CALLBACK: %s type = 0x%x, severity = 0x%x, id=0x%x, message = %s\n",
            ( type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : "" ),
-            type, severity, message );
+            type, severity, id, message );
 }
 void pico_start(PicoApp* app) {
     if (!app) {
@@ -35,7 +39,7 @@ void pico_start(PicoApp* app) {
     }
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
 
@@ -57,7 +61,7 @@ void pico_start(PicoApp* app) {
 
     printf("GL: %s\n", glGetString(GL_VERSION));
 
-    engine.renderer = create_renderer(1024);
+    engine.renderer = create_renderer(2 * MAX_QUADS);
 
     if (app->onCreate) {
         app->onCreate(&engine);
@@ -77,4 +81,14 @@ void pico_start(PicoApp* app) {
     if (app->onDestroy) {
         app->onDestroy();
     }
+}
+
+
+void pico_set_icon(PicoEngine* engine, PicoImage* icon) {
+    GLFWimage img = (GLFWimage) {
+        .width = icon->width,
+        .height = icon->height,
+        .pixels = icon->pixels
+    };
+    glfwSetWindowIcon(engine->window, 1, &img);
 }
