@@ -13,3 +13,5 @@
 
 bool pico_init(void);
 void pico_start(PicoApp* app);
+
+void pico_set_icon(PicoEngine* engine, PicoImage* icon);

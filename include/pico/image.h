@@ -10,3 +10,5 @@ PicoImage* new_image(U16 width, U16 height, U8* pixels);
 PicoImage* load_image(const cstr_t path);
 
 void pico_set_pixels(PicoImage* img, U8* pixels);
+
+void attach_image(PicoImage* img, int unit);

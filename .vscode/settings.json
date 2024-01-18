@@ -13,6 +13,8 @@
         "renderer.h": "c",
         "stdlib.h": "c",
         "stddef.h": "c",
-        "glad.h": "c"
-    }
+        "glad.h": "c",
+        "image.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
