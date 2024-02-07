@@ -1,0 +1,121 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-DDEBUG",
+      "-Iinclude",
+      "-Ivendor/include",
+      "-O0",
+      "-g",
+      "-c",
+      "-o",
+      "obj/Debug/Engine/image.o",
+      "src/engine/image.c"
+    ],
+    "directory": "/home/george/dev/pico",
+    "file": "/home/george/dev/pico/src/engine/image.c",
+    "output": "/home/george/dev/pico/obj/Debug/Engine/image.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-DDEBUG",
+      "-Iinclude",
+      "-Ivendor/include",
+      "-O0",
+      "-g",
+      "-c",
+      "-o",
+      "obj/Debug/Engine/stb_image.o",
+      "src/engine/stb_image.c"
+    ],
+    "directory": "/home/george/dev/pico",
+    "file": "/home/george/dev/pico/src/engine/stb_image.c",
+    "output": "/home/george/dev/pico/obj/Debug/Engine/stb_image.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-DDEBUG",
+      "-Iinclude",
+      "-Ivendor/include",
+      "-O0",
+      "-g",
+      "-c",
+      "-o",
+      "obj/Debug/Engine/engine.o",
+      "src/engine/engine.c"
+    ],
+    "directory": "/home/george/dev/pico",
+    "file": "/home/george/dev/pico/src/engine/engine.c",
+    "output": "/home/george/dev/pico/obj/Debug/Engine/engine.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-DDEBUG",
+      "-Iinclude",
+      "-Ivendor/include",
+      "-O0",
+      "-g",
+      "-c",
+      "-o",
+      "obj/Debug/Engine/maths.o",
+      "src/engine/maths.c"
+    ],
+    "directory": "/home/george/dev/pico",
+    "file": "/home/george/dev/pico/src/engine/maths.c",
+    "output": "/home/george/dev/pico/obj/Debug/Engine/maths.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-DDEBUG",
+      "-Iinclude",
+      "-Ivendor/include",
+      "-O0",
+      "-g",
+      "-c",
+      "-o",
+      "obj/Debug/Engine/utils.o",
+      "src/engine/utils.c"
+    ],
+    "directory": "/home/george/dev/pico",
+    "file": "/home/george/dev/pico/src/engine/utils.c",
+    "output": "/home/george/dev/pico/obj/Debug/Engine/utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-DDEBUG",
+      "-Iinclude",
+      "-Ivendor/include",
+      "-O0",
+      "-g",
+      "-c",
+      "-o",
+      "obj/Debug/Engine/renderer.o",
+      "src/engine/renderer.c"
+    ],
+    "directory": "/home/george/dev/pico",
+    "file": "/home/george/dev/pico/src/engine/renderer.c",
+    "output": "/home/george/dev/pico/obj/Debug/Engine/renderer.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-DDEBUG",
+      "-Iinclude",
+      "-Ivendor/include",
+      "-O0",
+      "-g",
+      "-c",
+      "-o",
+      "obj/Debug/Sandbox/sandbox.o",
+      "src/sandbox/sandbox.c"
+    ],
+    "directory": "/home/george/dev/pico",
+    "file": "/home/george/dev/pico/src/sandbox/sandbox.c",
+    "output": "/home/george/dev/pico/obj/Debug/Sandbox/sandbox.o"
+  }
+]

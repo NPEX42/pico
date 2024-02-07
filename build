@@ -1,4 +1,10 @@
 #!/bin/bash
 ./premake5 gmake2
-make clean
-make -j6 || exit 1
+make clean -j
+if ! command -v bear &> /dev/null
+then
+    make -j
+else
+    bear -- make -j
+fi
+
